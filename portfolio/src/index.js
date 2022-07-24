@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './nav.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Nav from './Nav';
+import Timeline from './timeline';
 
 ReactDOM.render(
   <React.StrictMode>
+    <Nav />
     <App />
+    <Timeline />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -1,41 +1,10 @@
-.App {
-    text-align: center;
-}
+/* Farver 
+https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
+*/
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
-}
-
-.App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
+/* PARTICLES */
 #tsparticles {
     position: fixed;
     height: 100%;
@@ -45,4 +14,70 @@
     left: 0;
     top: 0;
     z-index: -1;
+    background-color: #100F0F;
+}
+
+.timeline-main-container{
+    background-color: #E2DCC8;
+    height: 100vh;
+}
+
+.App{
+    height: 100vh;
+}
+
+.land-txt-container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.land-img{
+    width: 65%;
+    border-radius: 50%;
+}
+
+.land-txt-main{
+    color: white;
+    font-size: 10vw;
+}
+
+.land-txt-sub{
+    color: white;
+    font-size: 8vw;
+}
+
+.landing-contact-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landing-contact-container h3{
+    color: white;
+}
+
+.landing-contact-some{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+
+.twitter:hover{
+    transform: scale(1.2);
+}
+
+.facebook:hover{
+    transform: scale(1.2);
+}
+
+.linkedin:hover{
+    transform: scale(1.2);
 }

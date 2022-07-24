@@ -1,14 +1,14 @@
 {
   "background": {
     "color": {
-      "value": "#282c34"
+      "value": "#100F0F"
     }
   },
   "fpsLimit": 120,
   "interactivity": {
     "events": {
       "onClick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "onHover": {
@@ -29,13 +29,13 @@
   },
   "particles": {
     "color": {
-      "value": "#ffffff"
+      "value": "#E2DCC8"
     },
     "links": {
-      "color": "#ffffff",
+      "color": "#0F3D3E",
       "distance": 150,
       "enable": true,
-      "opacity": 0.5,
+      "opacity": 0.7,
       "width": 1
     },
     "collisions": {
@@ -48,7 +48,7 @@
         "default": "bounce"
       },
       "random": false,
-      "speed": 6,
+      "speed": 1,
       "straight": false
     },
     "number": {
