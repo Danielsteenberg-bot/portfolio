@@ -12,6 +12,10 @@ import young from './young-gun.jpg';
 
 export default function Timeline() {
   return (
+
+
+
+
     <div className='timeline-main-container'>
       <div className='time-txt-container'> 
         <h4>Få et indblik i min rute gennem tiden</h4>
