@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './nav.css';
+import './timeline.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Nav from './Nav';
