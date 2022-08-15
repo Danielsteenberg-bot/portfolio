@@ -1,33 +1,85 @@
-import React from 'react';
-
-/* GSAP */
+import { useRef, useEffect } from "react";
+import "./App.css";
+import workout from "./workout.svg";
+import greensocklogo from "./greensocklogo.svg";
+import happy from "./happy.svg";
 import { gsap } from "gsap";
 
-/* IMG */
-import young from './young-gun.jpg';
+function App() {
+  const ref = useRef(null);
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelector(".first-paragraph"),
+      {
+        opacity: 0,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+      }
+    );
+  }, []);
 
+  useEffect(() => {
+    const element = ref.current;
+    gsap.fromTo(
+      element.querySelector("#gsap-logo"),
+      {
+        opacity: 0,
+        scale: 0.2,
+        y: -20,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1,
+        ease: "none",
+      }
+    );
+  }, []);
 
+  useEffect(() => {
+    const element = ref.current;
+    gsap.from(element.querySelector(".line"), {
+      scale: 0,
+      ease: "none",
+    });
+  }, []);
 
-
-
-export default function Timeline() {
   return (
-
-
-
-
-    <div className='timeline-main-container'>
-      <div className='time-txt-container'> 
-        <h4>Få et indblik i min rute gennem tiden</h4>
+    <div className="App" ref={ref}>
+      <div className="first">
+        <h1>ScrollTrigger</h1>
+        <p className="first-paragraph">
+          is the coolest Greensock plugin.
+          <span role="img" aria-label="celebrating">
+            🥳
+          </span>
+        </p>
+        <div className="logo-main">
+          <img src={workout} id="workout-logo" alt="workout" />
+        </div>
       </div>
 
-          <div className='timeline-img-holder'>
-          <img className='timeline-img' src={young} alt="billede af ham selv"></img>
+      <div className="second">
+        <div className="logo-main">
+          <img src={greensocklogo} id="gsap-logo" alt="greensocklogo" />
+        </div>
+      </div>
 
-          </div>
-
-
-
+      <div className="third">
+        <p>
+          <span className="line" />
+        </p>
+        <div className="logo-main">
+          <img src={happy} id="happy-logo" alt="happy" />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
+
+export default App;

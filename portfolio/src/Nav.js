@@ -10,14 +10,10 @@ export default function Nav() {
   return (
     <nav>
         
-{/*         <FontAwesomeIcon className='test' icon={faTwitter} size="lg" />
- */}    
+  
     
     
     <input type="checkbox" id="active"></input>
-    <div className='nav-header-container'>
-    <h2>Daniel Steenberg</h2>
-    </div>
     <label htmlFor="active" className='menu-btn'><FontAwesomeIcon icon={faBars} size="lg" /></label> 
     <div className='wrapper'>
         <ul className='menu'>
