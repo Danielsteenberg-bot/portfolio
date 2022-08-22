@@ -2,7 +2,9 @@ import React, { useCallback } from 'react';
 
 
 /* assets */
-import dig from './digselv.jpg';
+
+import icon from './assets/icon/icon.svg' 
+
 import './App.css';
 
 /* Particles */
@@ -14,8 +16,6 @@ import { loadFull } from "tsparticles";
 import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 
-/* GSAP */
-import { gsap } from "gsap";
 
 function App() {
     const particlesInit = useCallback(main => {
@@ -24,48 +24,24 @@ function App() {
 
 
 
-    const { useRef, useEffect } = React;
-    const txtRef = useRef(null);
-
-
-    useEffect(() => {
-        gsap.to("#thirdCircle", {
-          y: 100,
-          scrollTrigger: {
-            trigger: "#thirdCircle",
-            markers: true,
-            pin: true,
-            start: "top center",
-            scrub: true,
-          }
-        });
-      }, []);
-
 
 
     return (
-        
-
 
         <div className="App">
+             <Particles options={particlesOptions} init={particlesInit}/>
+            <div className='land-container'>
 
-<div ref={txtRef} id="thirdCircle" className='left-text-container'>
-                    <h3 className='left-text'>Bosat i Viborg</h3>
+                <img className='land-icon' src={icon} alt="random"></img>
+
+                <div className='land-txt-container'>
+                    <h1>Daniel Steenberg</h1>
                 </div>
 
-            <Particles options={particlesOptions} init={particlesInit}/>
-
-            <div className='land-txt-container'>
-                <h1 className='land-txt-main'>Daniel Steenberg</h1>
-                <h2 className='land-txt-sub'>Junior Frontend Developer</h2>
-
-                
-                <img className='land-img' src={dig} alt="billede af ham selv"></img>
+                <div className='under-land-txt-container'>
+                    <h2>Junior Frontend Udvikler</h2>
                 </div>
-
-                <div ref={txtRef} id="thirdCircle" className='left-text-container'>
-                    <h3 className='left-text'>Bosat i Viborg</h3>
-                </div>
+            </div>
 
 
 
@@ -94,6 +70,18 @@ function App() {
                         </a>
                 </div>
             </div>
+        <div className='bottom-line' >
+            <div className='left-acordion underline-animation'>LEFT</div>
+                <div className='arrow'>
+                    <section id="section10" className="demo">
+                    <a href="#thanks"><span></span></a>
+                </section>
+            </div>
+            <div className='right-acordion underline-animation-right'>RIGHT</div>
+        </div>
+
+
+
         </div>
     );
 }

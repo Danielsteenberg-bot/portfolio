@@ -5,6 +5,7 @@ import './nav.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Nav from './Nav';
+import About from './About';
 
 ReactDOM.render(
   <React.StrictMode>
