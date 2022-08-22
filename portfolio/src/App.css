@@ -23,7 +23,7 @@ https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
 }
 
 .App{
-    height: 100vh;
+    height: 300vh;
 }
 
 .land-txt-container{
@@ -36,18 +36,27 @@ https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
 }
 
 .land-img{
-    width: 65%;
+    width: 25%;
     border-radius: 50%;
+    padding-top: 70px;
 }
 
 .land-txt-main{
     color: white;
-    font-size: 10vw;
+    font-size: 7vw;
 }
 
 .land-txt-sub{
     color: white;
-    font-size: 8vw;
+    padding-top: 35px;
+    font-size: 3vw;
+}
+
+.left-text-container{
+    background-color: red;
+    height: 250px;
+    width: 250px;
+    background-attachment: fixed;
 }
 
 .landing-contact-container{

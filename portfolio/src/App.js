@@ -1,31 +1,78 @@
 import React, { useCallback } from 'react';
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
+
+
+/* assets */
 import dig from './digselv.jpg';
 import './App.css';
+
 /* Particles */
 import particlesOptions from "./particles.json";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 /* Font-awesome */
 import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
+
+
+/* GSAP */
+import { gsap } from "gsap";
 
 function App() {
     const particlesInit = useCallback(main => {
         loadFull(main);
     }, [])
 
+
+
+    const { useRef, useEffect } = React;
+    const txtRef = useRef(null);
+
+
+    useEffect(() => {
+        gsap.to("#thirdCircle", {
+          y: 100,
+          scrollTrigger: {
+            trigger: "#thirdCircle",
+            markers: true,
+            pin: true,
+            start: "top center",
+            scrub: true,
+          }
+        });
+      }, []);
+
+
+
     return (
         
 
 
         <div className="App">
+
+<div ref={txtRef} id="thirdCircle" className='left-text-container'>
+                    <h3 className='left-text'>Bosat i Viborg</h3>
+                </div>
+
             <Particles options={particlesOptions} init={particlesInit}/>
 
             <div className='land-txt-container'>
-                <h1 className='land-txt-main'>Velkommen til</h1>
+                <h1 className='land-txt-main'>Daniel Steenberg</h1>
+                <h2 className='land-txt-sub'>Junior Frontend Developer</h2>
+
+                
                 <img className='land-img' src={dig} alt="billede af ham selv"></img>
-                <h2 className='land-txt-sub'>Daniels Portfolio</h2>
-            </div>
+                </div>
+
+                <div ref={txtRef} id="thirdCircle" className='left-text-container'>
+                    <h3 className='left-text'>Bosat i Viborg</h3>
+                </div>
+
+
+
+
+
+
+
 
 
             <div className='landing-contact-container'>
