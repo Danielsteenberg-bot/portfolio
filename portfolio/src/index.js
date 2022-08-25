@@ -6,11 +6,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Nav from './Nav';
 import About from './About';
+import Test from './Test';
 
 ReactDOM.render(
   <React.StrictMode>
     <Nav />
-    <App />
+    
+    <Test />
   </React.StrictMode>,
   document.getElementById('root')
 );

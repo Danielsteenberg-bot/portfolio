@@ -15,6 +15,9 @@ import { loadFull } from "tsparticles";
 /* Font-awesome */
 import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
 
+/* Spring */
+import { useSpring, animated } from 'react-spring'
+
 
 
 function App() {
@@ -22,15 +25,48 @@ function App() {
         loadFull(main);
     }, [])
 
+    const revalFromTop = useSpring({
+        to: {opacity: 1, y:0},
+        from:{ opacity: 0, y:-100},  
+        delay: 400
+    })
+    const revalFromBottom = useSpring({
+        to: {opacity: 1},
+        from:{ opacity: 0},  
+        delay: 800
+    })
+    const revalFromRight = useSpring({
+        to: {opacity: 1, x:0},
+        from:{ opacity: 0, x:200},  
+        delay: 600
+    })
+    const revalFromLeft = useSpring({
+        to: {opacity: 1, x:0},
+        from:{ opacity: 0, x:-200},  
+        delay: 600
+    })
 
 
+
+function revealLeft(){
+    var hiddenL = document.querySelector(".hiddenL");
+
+    hiddenL.classList.toggle("slideLeft")
+
+}
+
+function revealRight(){
+    var hiddenR = document.querySelector(".hiddenR");
+
+    hiddenR.classList.toggle("slideRight")
+}
 
 
     return (
 
         <div className="App">
              <Particles options={particlesOptions} init={particlesInit}/>
-            <div className='land-container'>
+            <animated.div className='land-container' style={revalFromTop}>
 
                 <img className='land-icon' src={icon} alt="random"></img>
 
@@ -41,14 +77,7 @@ function App() {
                 <div className='under-land-txt-container'>
                     <h2>Junior Frontend Udvikler</h2>
                 </div>
-            </div>
-
-
-
-
-
-
-
+            </animated.div>
 
 
             <div className='landing-contact-container'>
@@ -71,13 +100,21 @@ function App() {
                 </div>
             </div>
         <div className='bottom-line' >
-            <div className='left-acordion underline-animation'>LEFT</div>
-                <div className='arrow'>
+            <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> LEFT</animated.div>
+            <div className='hiddenL'>
+                <h2>Her skal man så kunne læse lidt om min skole</h2>
+                <p>lorme lorem lorem</p>
+            </div>
+                <animated.div style={revalFromBottom} className='arrow'>
                     <section id="section10" className="demo">
                     <a href="#thanks"><span></span></a>
                 </section>
+            </animated.div>
+            <animated.div style={revalFromRight} className='right-acordion underline-animation-right' onClick={revealRight}>RIGHT</animated.div>
+            <div className='hiddenR'>
+                <h2>Her skal man så kunne læse lidt om min skole</h2>
+                <p>lorme lorem lorem</p>
             </div>
-            <div className='right-acordion underline-animation-right'>RIGHT</div>
         </div>
 
 
