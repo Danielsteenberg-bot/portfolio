@@ -11,13 +11,14 @@ import About from './About';
 export default function Test() {
   return (
 <Parallax pages={2} style={{ top: '0', left: '0' }}>
-  <ParallaxLayer
+   <ParallaxLayer
+    className='behind'
     offset={0}
     speed={2.5}
-    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
         <App />
-  </ParallaxLayer>
-
+   </ParallaxLayer>
+ 
 
   <ParallaxLayer
     offset={1}

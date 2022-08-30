@@ -23,7 +23,6 @@ body{
     justify-content: center;
     color: var(--light);
     background-color: var(--green);
-    position: relative;
 }
 
 
@@ -85,7 +84,6 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
 }
   
   
@@ -194,37 +192,10 @@ body{
   }
   
   
-  
-  /* Layout Grid  */
-  .container {
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 2fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-  }
-  
-  .txt-box1 { grid-area: 4 / 2 / 5 / 4; }
-  
-  .txt-box2 { grid-area: 5 / 5 / 7 / 7; }
-  
-  .landing-img { grid-area: 3 / 4 / 6 / 5; }
-  
-  .txt-box3 { grid-area: 8 / 2 / 10 / 4; }
-  
-  .txt-box4 { grid-area: 10 / 5 / 12 / 7; }
-  
-  .content-img { grid-area: 8 / 3 / 12 / 6; }
-  
-  .nav { grid-area: 1 / 1 / 2 / 8; }
-  
-  .land-txt { grid-area: 2 / 2 / 3 / 8; }
-  
-  
-  /* Layout Grid  */
+  .behind{
+    z-index: -5;
+}
+
 
 /* SO-ME */
 .landing-contact-some{
@@ -232,8 +203,18 @@ body{
     display: flex;
     justify-content: space-around;
     width: 25%;
+    z-index: 2 !important;
+    
+
 }
 
+.landing-contact-container{
+  z-index: 2 !important;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 1rem;
+}
 
 .twitter:hover{
     transform: scale(1.2);
@@ -258,7 +239,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
+    height: 70vh !important;
 }
 
 .land-icon{
@@ -268,7 +249,7 @@ body{
 .land-txt-container h1{
 font-size: 5rem;
 margin-top: 5rem;
-margin-bottom: 5rem;
+margin-bottom: 2.5rem;
 }
 
 .land-txt-container h2{
@@ -302,7 +283,7 @@ font-size: 2.5vw;
     z-index: -1;
 }
 .hiddenR{
-    transform: translateX(1000px);
+    transform: translateX(2000px);
 }
 
 .slideRight{
@@ -324,8 +305,8 @@ font-size: 2.5vw;
 
 .underline-animation{
 display: inline-block;
-position: relative;
 color: var(--light);
+z-index: 2;
 }
 
 .underline-animation:after{
@@ -334,7 +315,7 @@ color: var(--light);
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    top: 25%;
+    top: 50%;
     left: 0;
     background-color: var(--light);
     transform-origin: bottom right;
@@ -357,7 +338,7 @@ color: var(--light);
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    top: 25%;
+    top: 50%;
     left: 0;
     background-color: var(--light);
     transform-origin: bottom right;

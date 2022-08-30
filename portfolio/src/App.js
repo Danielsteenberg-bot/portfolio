@@ -27,7 +27,7 @@ function App() {
     }, [])
 
     const revalFromTop = useSpring({
-        to: {opacity: 1, y:0},
+        to: {opacity: 1, y:50},
         from:{ opacity: 0, y:-100},  
         delay: 400
     })
@@ -44,6 +44,11 @@ function App() {
     const revalFromLeft = useSpring({
         to: {opacity: 1, x:0},
         from:{ opacity: 0, x:-200},  
+        delay: 600
+    })
+    const revalFromMid = useSpring({
+        to: {opacity: 1, x:0, y:0},
+        from:{ opacity: 0, y:-100},
         delay: 600
     })
 
@@ -63,14 +68,19 @@ function revealRight(){
 }
 
 
+
+
     return (
 
+        
+
         <div className="App">
-             <Particles options={particlesOptions} init={particlesInit}/>
-             <div className='land-container'>
-            <ParallaxLayer 
+             <Particles  options={particlesOptions} init={particlesInit}/>
+            <ParallaxLayer
+            className='land-container' 
                     offset={0}
                     speed={0.5}>
+             <div className='land-container'>
                 <animated.div className='land-container' style={revalFromTop}>
 
                 <img className='land-icon' src={icon} alt="random"></img>
@@ -84,13 +94,11 @@ function revealRight(){
                 </div>
 
                 </animated.div>
-            </ParallaxLayer>
             </div>
 
 
     <div className='landing-contact-container'>
-        <ParallaxLayer offset={0}speed={0.7} style={{display: 'flex', justifyContent: 'center', flexDirection:'column', alignItems: 'center' }}>
-            <div className='landing-contact-container'>
+            <animated.div style={revalFromMid} className='landing-contact-container'>
                 <h3>Find mig her</h3>
                     <div className='landing-contact-some'>
                         <a 
@@ -108,28 +116,36 @@ function revealRight(){
                             <FaLinkedin className='linkedin' size="2.5em" color="#E2DCC8" />
                         </a>
                 </div>
-             </div>
-        </ParallaxLayer>
+             </animated.div>
     </div>
-        <div className='bottom-line' >
+    </ParallaxLayer>
+
+        <div className='bottom-line'>
+    <ParallaxLayer className='behind' offset={0}speed={0.7}>
+
             <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> LEFT</animated.div>
             <div className='hiddenL'>
-                <h2>Her skal man så kunne læse lidt om min skole</h2>
+                    <h2>Her skal man så kunne læse lidt om min skole</h2>
                 <p>lorme lorem lorem</p>
             </div>
+
                 <animated.div style={revalFromBottom} className='arrow'>
-                    <section id="section10" className="demo">
+                        <section id="section10" className="demo">
                     <a href="#thanks"><span></span></a>
                 </section>
             </animated.div>
+
+        
             <animated.div style={revalFromRight} className='right-acordion underline-animation-right' onClick={revealRight}>RIGHT</animated.div>
             <div className='hiddenR'>
                 <div className='hiddenTXT'>
-                <h2>Her skal man så kunne læse lidt om min skole</h2>
-                <p>lorme lorem lorem</p>
+                        <h2>Her skal man så kunne læse lidt om min skole</h2>
+                    <p>lorme lorem lorem</p>
                 </div>
             </div>
+        </ParallaxLayer>
         </div>
+
 
 
 
