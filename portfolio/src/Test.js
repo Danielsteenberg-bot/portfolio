@@ -13,12 +13,11 @@ export default function Test() {
 <Parallax pages={2} style={{ top: '0', left: '0' }}>
   <ParallaxLayer
     offset={0}
-    speed={-2.5}
+    speed={2.5}
     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <App />
   </ParallaxLayer>
 
-  <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: 'black' }} />
 
   <ParallaxLayer
     offset={1}
@@ -29,6 +28,14 @@ export default function Test() {
       alignItems: 'center',
       color: 'black',
     }}>
+        <div>
+    <h3>Hej</h3>
+    <h3>Hej</h3>
+    <h3>Hej</h3>
+    <h3>Hej</h3>
+    <h3>Hej</h3>
+  </div>
   </ParallaxLayer>
+
 </Parallax>  )
 }

@@ -17,6 +17,7 @@ import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 /* Spring */
 import { useSpring, animated } from 'react-spring'
+import { ParallaxLayer } from '@react-spring/parallax';
 
 
 
@@ -66,7 +67,11 @@ function revealRight(){
 
         <div className="App">
              <Particles options={particlesOptions} init={particlesInit}/>
-            <animated.div className='land-container' style={revalFromTop}>
+             <div className='land-container'>
+            <ParallaxLayer 
+                    offset={0}
+                    speed={0.5}>
+                <animated.div className='land-container' style={revalFromTop}>
 
                 <img className='land-icon' src={icon} alt="random"></img>
 
@@ -77,9 +82,14 @@ function revealRight(){
                 <div className='under-land-txt-container'>
                     <h2>Junior Frontend Udvikler</h2>
                 </div>
-            </animated.div>
+
+                </animated.div>
+            </ParallaxLayer>
+            </div>
 
 
+    <div className='landing-contact-container'>
+        <ParallaxLayer offset={0}speed={0.7} style={{display: 'flex', justifyContent: 'center', flexDirection:'column', alignItems: 'center' }}>
             <div className='landing-contact-container'>
                 <h3>Find mig her</h3>
                     <div className='landing-contact-some'>
@@ -98,7 +108,9 @@ function revealRight(){
                             <FaLinkedin className='linkedin' size="2.5em" color="#E2DCC8" />
                         </a>
                 </div>
-            </div>
+             </div>
+        </ParallaxLayer>
+    </div>
         <div className='bottom-line' >
             <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> LEFT</animated.div>
             <div className='hiddenL'>
@@ -112,8 +124,10 @@ function revealRight(){
             </animated.div>
             <animated.div style={revalFromRight} className='right-acordion underline-animation-right' onClick={revealRight}>RIGHT</animated.div>
             <div className='hiddenR'>
+                <div className='hiddenTXT'>
                 <h2>Her skal man så kunne læse lidt om min skole</h2>
                 <p>lorme lorem lorem</p>
+                </div>
             </div>
         </div>
 
