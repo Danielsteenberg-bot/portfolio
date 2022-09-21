@@ -5,16 +5,21 @@ import App from './App';
 import About from './About';
 
 
-
+/* Particles */
+import particlesOptions from "./particles.json";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 
 
 export default function Test() {
+
   return (
+
 <Parallax pages={2} style={{ top: '0', left: '0' }}>
    <ParallaxLayer
     className='behind'
     offset={0}
-    speed={2.5}
+    speed={.5}
     style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
         <App />
    </ParallaxLayer>

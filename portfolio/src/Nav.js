@@ -5,8 +5,34 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 /* import { faTwitter } from '@fortawesome/free-brands-svg-icons'
  */
 
+import { Routes, Route, Link } from "react-router-dom";
+
+
+
 
 export default function Nav() {
+
+/* 
+  const Nav = () =>{
+
+    return    
+    <div>
+    <input type="checkbox" id="active"></input>
+    <label htmlFor="active" className='menu-btn'><FontAwesomeIcon icon={faBars} size="lg" /></label> 
+    <div className='wrapper'>
+        <ul className='menu'>
+          <Routes>
+            <Link to="/">Home</Link>
+            <Link to="/">About</Link>
+            <Link to="/">Projects</Link>
+            <Link to="/">Contact</Link>
+          </Routes>
+        </ul>
+    </div>
+    </div>
+     */
+
+
   return (
     <nav>
         

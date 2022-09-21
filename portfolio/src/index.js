@@ -1,17 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+/* CSS */
 import './index.css';
 import './nav.css';
-import App from './App';
+import './components/circle.css'
+import './components/circleRight.css'
+
 import * as serviceWorker from './serviceWorker';
+
+/* "Sider" */
+import App from './App';
 import Nav from './Nav';
-import About from './About';
 import Test from './Test';
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Nav />
-    
     <Test />
   </React.StrictMode>,
   document.getElementById('root')
