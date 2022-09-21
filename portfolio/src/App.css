@@ -176,24 +176,15 @@ body{
     justify-content: center;
     align-items: center;
   }
-  
-  .nav img:hover{
-    animation-play-state: paused;
-  }
+
   
   .nav img{
     width: 25%;
-    animation-name: spin;
-    animation-duration: 30.5s;
-    animation-iteration-count: infinite;
-    transform-origin: 50% 50%;
-    display: inline-block;
-  
   }
   
   
   .behind{
-    z-index: -5;
+    z-index: -1;
 }
 
 
@@ -203,17 +194,25 @@ body{
     display: flex;
     justify-content: space-around;
     width: 25%;
-    z-index: 2 !important;
+    z-index: 2000 !important;
     
 
 }
 
 .landing-contact-container{
-  z-index: 2 !important;
   display: flex;
   justify-content: space-around;
   width: 80%;
   margin-top: 1rem;
+  z-index: 2000 !important;
+}
+
+.landing-contact-container a{
+  z-index: 200 !important;
+}
+
+.twitter{
+  z-index: 2000;
 }
 
 .twitter:hover{
@@ -259,9 +258,10 @@ font-size: 2.5vw;
 .left-acordion{
     position: absolute;
     bottom: 0;
-    left: 0;
-    top: 90%;
+    left: 1%;
+    top: 95%;
     font-size: 2vw;
+    cursor: pointer;
     margin-left: 5%;
 }
 
@@ -315,7 +315,7 @@ z-index: 2;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    top: 50%;
+    top: 80%;
     left: 0;
     background-color: var(--light);
     transform-origin: bottom right;
@@ -338,7 +338,7 @@ color: var(--light);
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    top: 50%;
+    top: 80%;
     left: 0;
     background-color: var(--light);
     transform-origin: bottom right;
@@ -354,11 +354,12 @@ color: var(--light);
 .right-acordion{
     justify-content: flex-end;
     bottom: 0;
-    right: 0;
+    right: 1%;
     position: absolute;
-    top: 90%;
+    top: 95%;
     font-size: 2vw;
     margin-right: 5%;
+    cursor: pointer;
 }
 
 .bottom-line{
@@ -433,3 +434,7 @@ color: var(--light);
       opacity: 0;
     }
   }
+
+
+
+  

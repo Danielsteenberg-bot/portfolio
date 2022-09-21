@@ -18,6 +18,8 @@ import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
 /* Spring */
 import { useSpring, animated } from 'react-spring'
 import { ParallaxLayer } from '@react-spring/parallax';
+import CircleSkills from './components/CircleSkillsLeft';
+import CircleSkillsRight from './components/CircleSkillsRight';
 
 
 
@@ -56,15 +58,27 @@ function App() {
 
 function revealLeft(){
     var hiddenL = document.querySelector(".hiddenL");
+    var animateHTML = document.querySelector('.HTML-circle');
+    var animateCSS = document.querySelector('.css-circle');
+    var animateJS = document.querySelector('.js-circle');
 
-    hiddenL.classList.toggle("slideLeft")
+    hiddenL.classList.toggle("slideLeft");
+    animateHTML.classList.toggle("html-animation");
+    animateCSS.classList.toggle("css-animation");
+    animateJS.classList.toggle("js-animation");
 
 }
 
 function revealRight(){
     var hiddenR = document.querySelector(".hiddenR");
+    var animateLaravel = document.querySelector('.laravel-circle');
+    var animateReact = document.querySelector('.react-circle');
+    var animateTailwind = document.querySelector('.tailwind-circle');
 
-    hiddenR.classList.toggle("slideRight")
+    hiddenR.classList.toggle("slideRight");
+    animateLaravel.classList.toggle("laravel-animation");
+    animateReact.classList.toggle("react-animation");
+    animateTailwind.classList.toggle("tailwind-animation");
 }
 
 
@@ -92,7 +106,6 @@ function revealRight(){
                 <div className='under-land-txt-container'>
                     <h2>Junior Frontend Udvikler</h2>
                 </div>
-
                 </animated.div>
             </div>
 
@@ -123,10 +136,9 @@ function revealRight(){
         <div className='bottom-line'>
     <ParallaxLayer className='behind' offset={0}speed={0.7}>
 
-            <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> LEFT</animated.div>
+            <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> Basis Sprog</animated.div>
             <div className='hiddenL'>
-                    <h2>Her skal man så kunne læse lidt om min skole</h2>
-                <p>lorme lorem lorem</p>
+            <CircleSkills />
             </div>
 
                 <animated.div style={revalFromBottom} className='arrow'>
@@ -136,11 +148,10 @@ function revealRight(){
             </animated.div>
 
         
-            <animated.div style={revalFromRight} className='right-acordion underline-animation-right' onClick={revealRight}>RIGHT</animated.div>
+            <animated.div style={revalFromRight} className='right-acordion underline-animation-right' onClick={revealRight}>Frameworks</animated.div>
             <div className='hiddenR'>
                 <div className='hiddenTXT'>
-                        <h2>Her skal man så kunne læse lidt om min skole</h2>
-                    <p>lorme lorem lorem</p>
+                    <CircleSkillsRight />
                 </div>
             </div>
         </ParallaxLayer>
