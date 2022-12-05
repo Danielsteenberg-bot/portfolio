@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 
 /* CSS */
 import './index.css';
-import './nav.css';
-import './components/circle.css'
-import './components/circleRight.css'
+
 
 import * as serviceWorker from './serviceWorker';
 

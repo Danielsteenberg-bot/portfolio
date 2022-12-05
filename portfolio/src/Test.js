@@ -1,21 +1,28 @@
-import React from 'react'
+import React, { useCallback } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import './App.css';
 import App from './App';
-import About from './About';
+import Text from './Text';
+
 
 
 /* Particles */
 import particlesOptions from "./particles.json";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import Work from './Work';
 
 
 export default function Test() {
+  const particlesInit = useCallback(main => {
+    loadFull(main);
+}, [])
 
   return (
 
-<Parallax pages={2} style={{ top: '0', left: '0' }}>
+<Parallax pages={3.5} style={{ top: '0', left: '0' }}>
+<Particles  options={particlesOptions} init={particlesInit}/>
+
    <ParallaxLayer
     className='behind'
     offset={0}
@@ -34,13 +41,21 @@ export default function Test() {
       alignItems: 'center',
       color: 'black',
     }}>
-        <div>
-    <h3>Hej</h3>
-    <h3>Hej</h3>
-    <h3>Hej</h3>
-    <h3>Hej</h3>
-    <h3>Hej</h3>
-  </div>
+
+    <Text />
+  </ParallaxLayer>
+
+  <ParallaxLayer
+    offset={2}
+    speed={0.5}
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      color: 'black',
+    }}>
+
+    <Work />
   </ParallaxLayer>
 
 </Parallax>  )

@@ -22,7 +22,6 @@ body{
     align-items: center;
     justify-content: center;
     color: var(--light);
-    background-color: var(--green);
 }
 
 
@@ -36,8 +35,8 @@ body{
     padding: 0;
     left: 0;
     top: 0;
-    z-index: -1;
-    background-color: #100F0F;
+    z-index: -100;
+
 }
 
 

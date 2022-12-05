@@ -7,6 +7,9 @@ import icon from './assets/icon/icon.svg'
 
 import './App.css';
 
+import './components/circle.css'
+import './components/circleRight.css'
+
 /* Particles */
 import particlesOptions from "./particles.json";
 import Particles from "react-tsparticles";
