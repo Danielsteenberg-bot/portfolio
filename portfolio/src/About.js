@@ -48,7 +48,7 @@ export default function About() {
   <div className="txt-box1">
   <div className='txt-container'>
         <div className='txt-left-1'>
-            <h2>Junior <br></br> Frontend <br></br> Udvikler</h2>
+            <h2>Junior <br></br> Frontend der tør give dig bort <br></br> Udvikler</h2>
           </div>
       </div>
   </div>
