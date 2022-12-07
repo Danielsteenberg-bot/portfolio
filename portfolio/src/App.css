@@ -16,12 +16,13 @@ https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
 body{
     scroll-behavior: smooth;
     font-family: 'Graduate', cursive;
-    min-height: 100vh;
     padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--light);
+    max-height: 100vh;
 }
 
 
@@ -29,7 +30,6 @@ body{
 /* PARTICLES */
 #tsparticles {
     position: fixed;
-    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -187,16 +187,7 @@ body{
 }
 
 
-/* SO-ME */
-.landing-contact-some{
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-    width: 25%;
-    z-index: 2000 !important;
-    
 
-}
 
 .landing-contact-container{
   display: flex;
@@ -435,6 +426,38 @@ color: var(--light);
     }
   }
 
+
+  @media screen and (max-width: 1000px) {
+  
+    .land-icon{
+      width: 35%;
+    }
+
+
+   .land-container h1 {
+    text-align: center;
+    font-size: 15vw;
+  }
+
+   .under-land-txt-container h2{
+    font-size: 6vw;
+   }
+
+   .left-acordion.underline-animation{
+    font-size: 3vw;
+   }
+
+   .right-acordion.underline-animation-right{
+    font-size: 3vw;
+   }
+
+   .slideRight{
+    width: 45vw;
+   }
+   
+  
+  
+}
 
 
   

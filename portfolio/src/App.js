@@ -15,8 +15,6 @@ import particlesOptions from "./particles.json";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-/* Font-awesome */
-import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa'
 
 /* Spring */
 import { useSpring, animated } from 'react-spring'
@@ -96,7 +94,7 @@ function revealRight(){
             <ParallaxLayer
             className='land-container' 
                     offset={0}
-                    speed={0.5}>
+                    speed={-5.5}>
              <div className='land-container'>
                 <animated.div className='land-container' style={revalFromTop}>
 
@@ -107,7 +105,7 @@ function revealRight(){
                 </div>
 
                 <div className='under-land-txt-container'>
-                    <h2>Junior Frontend Udvikler</h2>
+                    <h2>Junior Front & Software Udvikler</h2>
                 </div>
                 </animated.div>
             </div>
@@ -115,29 +113,13 @@ function revealRight(){
 
     <div className='landing-contact-container'>
             <animated.div style={revalFromMid} className='landing-contact-container'>
-                <h3>Find mig her</h3>
-                    <div className='landing-contact-some'>
-                        <a 
-                            href='https://twitter.com/winify_us'>
-                            <FaTwitter className='twitter' size="2.5em" color="#E2DCC8" />
-                        </a>               
-                        
-                        <a 
-                            href='https://www.facebook.com/daniel.m.steenberg/'>
-                            <FaFacebook className='facebook' size="2.5em" color="#E2DCC8" />
-                        </a>
 
-                        <a
-                            href='https://www.linkedin.com/in/daniel-steenberg-584269190/'>
-                            <FaLinkedin className='linkedin' size="2.5em" color="#E2DCC8" />
-                        </a>
-                </div>
              </animated.div>
     </div>
     </ParallaxLayer>
 
         <div className='bottom-line'>
-    <ParallaxLayer className='behind' offset={0}speed={0.7}>
+    <ParallaxLayer className='behind' offset={0}speed={5}>
 
             <animated.div style={revalFromLeft} className='left-acordion underline-animation' onClick={revealLeft}> Basis Sprog</animated.div>
             <div className='hiddenL'>

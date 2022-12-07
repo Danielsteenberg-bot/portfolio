@@ -16,7 +16,7 @@
 .first-project{
     background-color: var(--green);
     width: 30vw;
-    height: 80vh;
+    height: 87vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,8 +32,11 @@
 
 .first-project p{
     color: var(--light);
-    margin: 1rem;
     font-size: 1.3vw;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    padding: 10px;
+    width: 90%;
 }
 
 .first-project button{
@@ -43,6 +46,12 @@
     border: none;
     background-color: var(--dark);
     color: var(--light);
+    position: relative;
+    top: 5%;
+}
+
+.first-project button:hover{
+    cursor: pointer;
 }
 
 .project-img{
@@ -54,7 +63,7 @@
 @media screen and (max-width: 500px){
     .project-wrapper{
         display: flex;
-        gap: 2rem;
+        /* gap: 2rem; */
         flex-direction: column;
         align-content: center;
         flex-wrap: wrap;
@@ -65,7 +74,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 70vh;
+        height: 80vh;
+    }
+
+    .first-project button{
+        top: 0%;
     }
 
     .first-project h6{
@@ -75,6 +88,10 @@
     
     .first-project p{
         font-size: 4vw;
+    }
+
+    .mobile{
+        display: none;
     }
     
 }

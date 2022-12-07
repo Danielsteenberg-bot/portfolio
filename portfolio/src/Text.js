@@ -35,10 +35,16 @@ export default function Text() {
             <ul>
                 <li>Alder: 25år</li>
                 <li>Bosat: Viborg</li>
-                <li>Uddannelse: Frontend Udvikler + Software Udvikler</li>
+                <li>Uddannelse: Frontend Udvikler & Software Udvikler</li>
                 <li>Fritids aktiviteter: Esport, Computer Spil </li>
             </ul>
         </div>
         </animated.div>
   )
 }
+
+
+/* IDE:
+EVT lave parallax med billeder af de forskellige interesser i ovenstående punkter
+
+*/

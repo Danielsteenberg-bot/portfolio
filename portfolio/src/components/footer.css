@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Major+Mono+Display&family=VT323&display=swap');
+
+:root{
+    --light: #F1F1F1;
+    --dark: #100f0f;
+    --green: #0f3d3e;
+    --semi-light: #e2dcc8;
+}
+
+.footer-container{
+    height: 25vh;
+    background-color: var(--semi-light);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer{
+    width: 50%;    
+
+}
+
+.footer h3{
+    color: var(--green);
+    text-align: center;
+    font-size: 3.5vw;
+    margin: 10px;
+}
+
+/* SO-ME */
+.footer-contact-some{
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    z-index: 2000 !important;
+}
+
+.footer-some{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 2px;
+}
+.copyright p {
+    color: var(--dark);
+    font-size: 10px;
+}

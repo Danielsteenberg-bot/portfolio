@@ -22,7 +22,6 @@ export default function CircleSkills() {
     <div className='main-container'>
       <div className='skill-container'>
         <div className='skill-txt-container'>
-          <h4>Frameworks</h4>
         </div>
       </div>
       <div className='React-container spacer'>

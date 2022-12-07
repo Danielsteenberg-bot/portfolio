@@ -11,6 +11,7 @@ import particlesOptions from "./particles.json";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Work from './Work';
+import Footer from './components/Footer';
 
 
 export default function Test() {
@@ -20,21 +21,22 @@ export default function Test() {
 
   return (
 
-<Parallax pages={3.5} style={{ top: '0', left: '0' }}>
+<Parallax pages={2.2} style={{ top: '0', left: '0' }}>
 <Particles  options={particlesOptions} init={particlesInit}/>
 
-   <ParallaxLayer
-    className='behind'
+    <ParallaxLayer
+
     offset={0}
     speed={.5}
-    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> 
-        <App />
-   </ParallaxLayer>
- 
+    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+    <App />
+
+    </ParallaxLayer>
+  
 
   <ParallaxLayer
-    offset={1}
-    speed={0.5}
+    offset={0.99}
+    speed={1}
     style={{
       display: 'flex',
       justifyContent: 'center',
@@ -46,8 +48,8 @@ export default function Test() {
   </ParallaxLayer>
 
   <ParallaxLayer
-    offset={2}
-    speed={0.5}
+    offset={1.7}
+    speed={1}
     style={{
       display: 'flex',
       justifyContent: 'center',
@@ -58,5 +60,19 @@ export default function Test() {
     <Work />
   </ParallaxLayer>
 
-</Parallax>  )
+<ParallaxLayer
+offset={1.6}
+style={{
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+}}
+
+>
+<Footer />
+</ParallaxLayer>
+</Parallax>  
+
+
+)
 }

@@ -8,6 +8,12 @@ import './portfolio.css';
 import Haakan from '../assets/img/website-haakan-snap.PNG'  */
 import Oneday from '../assets/img/oneday-website-snap.PNG' 
 
+
+/* Spring */
+
+import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+
+
  
 
 
@@ -16,30 +22,51 @@ export default function Portfolio() {
     <div>        
         <div className='project-container'>
             <div className='project-wrapper'>
+            <ParallaxLayer
+                    className='project-1'
+                    style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                    speed={.5}>
                 <div className='first-project'>
                     <h6>KM-Træpleje</h6>
                     <img className='project-img' src={Oneday}></img>
                     <p>Kunden bad om et hjemmeside der kunne fungere som marketing og "visitkort"</p>
                     <a href='https://km-traepleje.dk/'><button>Tjek Siden</button></a>
-
+                
 
                 </div>
-                <div className='first-project'>
+
+                <ParallaxLayer
+                    className='project-2'
+                    speed={.5}>
+                <div className='first-project mobile'>
                     <h6>Håkan Media</h6>
                     <img className='project-img' src={Oneday}></img>
                     <p>Kunden bad om et hjemmeside der kunne fungere som marketing og "visitkort"</p>
-                    <a href='https://www.alexanderhaakansson.dk/'><button>Tjek Siden</button></a>
+                    <a href='https://www.alexanderhaakansson.dk/'>
+                    <button>Tjek Siden</button>
+                    </a>
 
 
                 </div>
+                </ParallaxLayer>
+                
+                <ParallaxLayer
+                    className='project-3'
+                    speed={.5}
+                    style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}
+                    >
+
                 <div className='first-project'>
                     <h6>One Day Viborg</h6>
                     <img className='project-img' src={Oneday}></img>
-                    <p>Dette var et Projekt på Medieskolerne hvor vi samarbejde med fotografer om at vise en hel dag i Viborg</p>
+                    <p>Dette var et Projekt på hvor vi samarbejde med fotografer om at vise en hel dag i Viborg</p>
                     <a href='https://onedayviborg.dk/'><button>Tjek Siden</button></a>
 
 
-                </div> 
+                </div>
+                </ParallaxLayer>
+
+                </ParallaxLayer> 
         </div>
     </div>
 </div>
