@@ -4,8 +4,8 @@ import React from 'react'
 import './portfolio.css';
 
 /* IMG */
-/* import KM from '../assets/img/km-website-snap.png' 
-import Haakan from '../assets/img/website-haakan-snap.PNG'  */
+import KM from '../assets/img/km-website-snap.png' 
+import Haakan from '../assets/img/website-haakan-snap.PNG' 
 import Oneday from '../assets/img/oneday-website-snap.PNG' 
 
 
@@ -28,7 +28,7 @@ export default function Portfolio() {
                     speed={.5}>
                 <div className='first-project'>
                     <h6>KM-Træpleje</h6>
-                    <img className='project-img' src={Oneday}></img>
+                    <img className='project-img' src={KM}></img>
                     <p>Kunden bad om et hjemmeside der kunne fungere som marketing og "visitkort"</p>
                     <a href='https://km-traepleje.dk/'><button>Tjek Siden</button></a>
                 
@@ -40,7 +40,7 @@ export default function Portfolio() {
                     speed={.5}>
                 <div className='first-project mobile'>
                     <h6>Håkan Media</h6>
-                    <img className='project-img' src={Oneday}></img>
+                    <img className='project-img' src={Haakan}></img>
                     <p>Kunden bad om et hjemmeside der kunne fungere som marketing og "visitkort"</p>
                     <a href='https://www.alexanderhaakansson.dk/'>
                     <button>Tjek Siden</button>
