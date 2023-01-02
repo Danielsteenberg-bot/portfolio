@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Major+Mono+Display&family=VT323&display=swap');
+
+:root{
+    --light: #F1F1F1;
+    --dark: #100f0f;
+    --green: #0f3d3e;
+    --semi-light: #e2dcc8;
+}
+
+.project-wrapper{
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+}
+
+.first-project{
+    background-color: var(--green);
+    width: 30vw;
+    height: 87vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-project h6{
+    font-size: 3vw;
+    padding: 0;
+    margin: 0.5rem;
+    color: var(--light);
+}
+
+.first-project p{
+    color: var(--light);
+    font-size: 1.3vw;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    padding: 10px;
+    width: 90%;
+}
+
+.first-project button{
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--dark);
+    color: var(--light);
+    position: relative;
+    top: 5%;
+}
+
+.first-project button:hover{
+    cursor: pointer;
+}
+
+.project-img{
+    width: 90%;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 500px){
+    .project-wrapper{
+        display: flex;
+        /* gap: 2rem; */
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .first-project{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+
+    .first-project button{
+        top: 0%;
+    }
+
+    .first-project h6{
+        font-size: 9vw;
+
+    }
+    
+    .first-project p{
+        font-size: 4vw;
+    }
+
+    .mobile{
+        display: none;
+    }
+    
+}
