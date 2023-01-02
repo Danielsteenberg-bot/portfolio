@@ -66,6 +66,7 @@ export default function Portfolio() {
                 </div>
                 </ParallaxLayer>
 
+
                 </ParallaxLayer> 
         </div>
     </div>
