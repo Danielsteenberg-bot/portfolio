@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Major+Mono+Display&family=VT323&display=swap');
+
+:root{
+    --light: #F1F1F1;
+    --dark: #100f0f;
+    --green: #0f3d3e;
+    --semi-light: #e2dcc8;
+}
+
+/* Body lårt */
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Graduate', cursive;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+}
+
+/* Cirlce skill */
+
+h4{
+  margin: 10px;
+}
+
+
+/* Ovenstående txt til skills */
+
+.skill-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .skill-txt-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #E2DCC8;
+  }
+  
+  .skill-txt-container h4{
+    font-size: 3rem;
+    padding-right: 10%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .skill-txt-container p {
+    font-size: 1.4rem;
+    margin: 4.5%;
+  }
+  
+  
+  .main-container{
+    background-color: #0f3d3e;
+    height: 100vh;
+    z-index: 1;
+    width: 25vw;
+  }
+  
+  .outer-icon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  
+  
+  .react-skill-inner{
+    width: 30%;
+    position: absolute;
+    bottom: 40%;
+    animation: moveInCircle 0.5s;
+  }
+  .tailwind-skill-inner{
+    width: 20%;
+    position: absolute;
+    bottom: 45%;
+    animation: moveInCircle 0.5s;
+  }
+  .laravel-skill-inner{
+    width: 15%;
+    position: absolute;
+    bottom: 45%;
+    animation: moveInCircle 0.5s;
+  }
+  
+  .TXT-skills{
+    font-size: 2rem;
+    position: absolute;
+    bottom: 95%;
+    animation: moveTXT 0.5s;
+    transition: all ease;
+    color: #E2DCC8;
+  }
+  
+  .icon-container{
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 25%;
+    padding-left: 10px;
+    
+  }
+  
+  .spacer{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .outer-icon{
+    position: relative;
+  }
+  
+  
+  
+  /* Animate outer ring */
+  
+  
+  .laravel-circle{
+  fill: #e2dcc8;
+  stroke: #100F0F;
+  opacity: 0;
+  
+  }
+  .react-circle{
+  fill: #e2dcc8;
+  stroke: #100F0F;
+  opacity: 0;
+  
+  }
+  .tailwind-circle{
+  fill: #e2dcc8;
+  stroke: #100F0F;
+  opacity: 0;
+
+  }
+  
+  .laravel-animation{
+    animation: circleLaravel 1s forwards;
+    animation-delay: .45s;
+  }
+  
+  .react-animation{
+    animation: circleReact 1s forwards;
+    animation-delay: .45s;
+
+  }
+  
+  .tailwind-animation{
+    animation: circleTailwind 1s forwards;
+    animation-delay: .45s;
+
+  }
+  
+  /* Skill points txt */
+  h6.skill-point-txt{
+      color: #e2dcc8;
+      font-size: 1.8vw;
+      margin: 0;
+      line-height: 120%;
+  }
+  
+  .skill-point-txt-wrapper{
+    padding: 2%;
+  }
+  
+  /* Individuelle Animationer  */
+  
+  @keyframes circleLaravel{
+    0%{
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+  
+    }
+  
+    100%{
+      stroke-dasharray: 1900;
+      stroke-dashoffset: -260;
+      stroke-width: 12px;
+      transform: rotate(270deg);
+      opacity: 1;
+  
+  
+    }
+  }
+  @keyframes circleReact{
+    0%{
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+  
+    }
+  
+    100%{
+      stroke-dasharray: 200;
+      stroke-dashoffset: -111;
+      stroke-width: 12px;
+      opacity: 1;
+  
+  
+    }
+  }
+  @keyframes circleTailwind{
+    0%{
+      stroke-dasharray: 0;
+      stroke-dashoffset: 0;
+  
+    }
+  
+    100%{
+      stroke-dasharray: 230;
+      stroke-dashoffset: -130;
+      transform: rotate(-45deg);
+      stroke-width: 12px;
+      opacity: 1;
+  
+  
+    }
+  }
+  
+  
+  /* Genrelle animationer */
+  @keyframes moveInCircle{
+    0%{
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+  }
+  
+  @keyframes moveTXT {
+  
+    0%{
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  
+    100%{
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+  }
+  
+  
+  @media screen and (min-width: 1500px) {
+  
+  .react-skill-inner{
+    width: 20%;
+  
+  }
+  
+  .laravel-skill-inner{
+    width: 10%;
+  }
+  
+  .tailwind-skill-inner{
+    width: 15%;
+  }
+  
+  .TXT-skills{
+    bottom: 95%;
+    
+  }
+
+
+  }
+
+  @media screen and (max-width: 1000px) {
+    .main-container{
+      width: 45vw;
+    }
+
+    .TXT-skills{
+      margin: 10px;
+    }
+
+  }
